@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alexa Boise Tour</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Alexa Boise Tour</h1>
+</header>
+
+<nav>
+    <a href="javascript:void(0)" onclick="openTab('Home')">Home</a>
+    <a href="javascript:void(0)" onclick="openTab('Video')">Video</a>
+    <a href="javascript:void(0)" onclick="openTab('Table')">Table</a>
+</nav>
+
+<!-- Content -->
+<div id="Home" class="tab-content">
+    <h2>Alexa Boise Tour</h2>
+    
+    <section>
+        <h3>Description:</h3>
+    </br>
+        <ul>
+            <li>Embark on a captivating journey through downtown Boise with our cutting-edge Alexa application, "Alexa Boise Tour."</li>
+            <li>Immerse yourself in the vibrant pulse of the city as you explore iconic landmarks such as JUMP, where creativity knows no bounds, and the lively Basque Block, a cultural hub brimming with history and flavor.</li>
+            <li>Brace yourself for an adrenaline rush at Freak Outly, an exhilarating stop that promises thrills and excitement.</li>
+            <li>Lastly, lose yourself in the eclectic atmosphere of Treefort, where music, arts, and community converge in an unforgettable celebration.</li>
+            <li>Let Alexa Boise Tour be your guide, unlocking hidden gems and local treasures at every turn.</li>
+            <li>Prepare for an immersive experience that transcends the ordinary, as we unveil the heart and soul of downtown Boise like never before.</li>
+        </ul>
+    </section>
+    
+</div>
+
+<div id="Video" class="tab-content">
+    <h1>Video</h1>
+    <h2>Alexa Boise Tour</h2>
+    <p>Recorded and Edited by: Nick Lotspeich</p>
+    <br>
+    <p>Featuring: Nick Lotspeich, Drew Peppley, and TJ Munger</p>
+    <iframe width="420" height="315" src="https://www.youtube.com/embed/xhmxjuWT3Qs"></iframe>
+</div>
+
+<div id="Table" class="tab-content">
+    <h2>Table</h2>
+    <p>Table Loaded: tour_log_items</p>
+    <table id="table-content" border="1">
+        <tr>
+            <th>Location</th>
+            <th>Rating</th>
+            <th>Time</th>
+        </tr>
+        
+        <!-- ... -->
+    </table>
+    
+</div>
+
+<script>
+    document.getElementById('Home').style.display = 'block';
+
+    function openTab(tabName) {
+        var i, tabContent;
+        tabContent = document.getElementsByClassName("tab-content");
+        for (i = 0; i < tabContent.length; i++) {
+            tabContent[i].style.display = "none";
+        }
+        document.getElementById(tabName).style.display = "block";
+
+        if (tabName === 'Table') {
+            fetch('http://localhost/getdata')
+                .then(response => response.json())
+                .then(data => {
+                    console.log(data);
+                    const table = document.querySelector('#table-content');
+                    data.forEach(row => {
+                        console.log("row: " + row.location);
+                        table.innerHTML += `<tr>
+                            <td>${row.location}</td>
+                            <td>${row.rating}</td>
+                            <td>${row.time}</td>
+                            </tr>`;
+                    });
+                })
+                .catch(error => console.error('Error:', error));
+        }
+    }
+</script>
+
+</body>
+</html>
