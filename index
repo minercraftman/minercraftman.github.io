@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TJ Munger - Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+            text-align: left;
+        }
+        header {
+            background: #333;
+            color: white;
+            padding: 20px;
+            font-size: 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        section {
+            padding: 20px;
+            margin: 20px 0;
+            background: white;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+            margin-top: 20px;
+            padding: 10px;
+            background: #333;
+            color: white;
+        }
+        img.profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        img.banner {
+            height: 100px;
+            width: auto;
+        }
+        a {
+            color: #0073e6;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>TJ Munger - Game Developer and Designer</h1>
+        <img src="https://files.oaiusercontent.com/file-K1r2ZWFgz2XNhbopXuqeV2?se=2025-04-03T20%3A07%3A16Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D299%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3Dghostbanner.png&sig=OHbbcvpzbSL6imNDBrf%2BkkkGFqtlPpVrlf2VQNMQ%2ByE%3D" alt="Ghost Banner" class="banner">
+    </header>
+    
+    <section>
+        <h2>About Me</h2>
+        <img src="https://media.licdn.com/dms/image/v2/D4D03AQFrAqjxrFrjzA/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1677634045978?e=1749081600&v=beta&t=Hsd-B1YWP2c2KsDvL4pNFC5y91N_QQ-8bPon3cc_52U" alt="Profile Picture" class="profile-pic">
+        <p>I am a highly motivated game developer with a background in Computer Science, specializing in Game Design. My expertise includes programming, interactive media, and mobile development, with experience in game engines such as Unreal Engine and Unity. Throughout my college career, I have worked on various projects that emphasize gameplay mechanics, world-building, and player engagement. My passion lies in creating immersive and dynamic gaming experiences that push the boundaries of interactive entertainment.</p>
+    </section>
+    
+    <section>
+        <h2>Projects</h2>
+        <ul>
+            <li><strong>Slimey Puzzles:</strong> Solo project using everything I've learned to make a 2D puzzle platformer.</li>
+            <li><strong>Code and Chaos - GIMM Rush:</strong> Co-led development of this cooperative game, managing the programming team and implementing core mechanics.</li>
+            <li><strong>T.O.D.D.:</strong> Local Multiplayer wave defense game where dwarves defend their garden against the attacking gnomes.</li>
+            <li><strong>Pacman Horror VR:</strong> Expanded skills in VR development, 3D modeling, and animation. Worked on this across my time in GIMM.</li>
+            <li><strong>CrackJack:</strong> My very first game project in the GIMM course. A game that used an AR camera to play a blackjack-styled card game.</li>
+        </ul>
+    </section>
+    
+    <section>
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:thomasmunger@u.boisestate.edu">thomasmunger@u.boisestate.edu</a></p>
+        <p>Phone: <strong>[Redacted]</strong></p>
+        <p><a href="https://www.linkedin.com/in/tj-munger-193443268/" target="_blank">LinkedIn Profile</a></p>
+    </section>
+    
+    <footer>
+        &copy; 2025 TJ Munger. All Rights Reserved.
+    </footer>
+</body>
+</html>
