@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html id="WebPage">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Calculator - My ITM 325 Web Site</title>
+    <link href="css/style.css" rel="stylesheet" />
+    <style>
+        #CalcGrid {
+            margin: 20px auto;
+            max-width: 300px;
+        }
+
+        #CalcGrid button {
+            width: 60px;
+            height: 60px;
+            font-size: 1.5rem;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        .operator-btn {
+            background-color: #f0f0f0;
+        }
+
+        .number-btn {
+            background-color: white;
+            font-weight: bold;
+        }
+
+        .action-btn {
+            background-color: #ddd;
+        }
+
+        .wide-btn {
+            width: 135px !important;
+        }
+
+        #LegacyCalc {
+            margin-top: 30px;
+            border-top: 1px solid #ccc;
+            padding-top: 20px;
+            text-align: left;
+            max-width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        #LegacyCalc label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        #LegacyCalc input,
+        #LegacyCalc select {
+            margin-bottom: 10px;
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <header id="Banner">
+        <img id="icon1" src="images/icon_profile.jpg" alt="My Icon" />
+        <img id="image1" src="images/profile_picture.jpg" alt="A picture of me." />
+        <h1>My ITM 325 Web Site</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="resume.html">Résumé</a></li>
+                <li><a href="calculator.html">Calculator</a></li>
+                <li><a href="ordermenu.html">PizzaTime</a></li>
+                <li><a href="hangman.html">Hangman</a></li>
+                <li id="DropdownLi"><a id="DropdownA" href="#">FontSize</a>
+                    <div id="DropdownDiv">
+                        <a href="#">12px</a>
+                        <a href="#">14px</a>
+                        <a href="#">16px</a>
+                        <a href="#">18px</a>
+                        <a href="#">20px</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div>
+        <div id="Wrapper">
+            <aside id="SideLinks">
+                <h2>Side Links</h2>
+                <ul>
+                    <li><a href="#">Link 1</a></li>
+                    <li><a href="#">Link 2</a></li>
+                    <li><a href="#">Link 3</a></li>
+                    <li><a href="#">Link 4</a></li>
+                    <li><a href="#">Link 5</a></li>
+                </ul>
+            </aside>
+            <section id="Content">
+
+                <h2>Calculator</h2>
+                <div style="text-align:center; padding: 20px;">
+
+                    <div style="margin-bottom: 20px;">
+                        <input type="text" id="Display" readonly
+                            style="width: 280px; height: 40px; font-size: 1.5rem; text-align: right; padding: 5px;" />
+                    </div>
+
+                    <div id="CalcGrid">
+                        <!-- Row 1 -->
+                        <button class="number-btn" onclick="appendNumber('7')">7</button>
+                        <button class="number-btn" onclick="appendNumber('8')">8</button>
+                        <button class="number-btn" onclick="appendNumber('9')">9</button>
+                        <button class="operator-btn" onclick="setOperator('/')">÷</button>
+                        <br>
+                        <!-- Row 2 -->
+                        <button class="number-btn" onclick="appendNumber('4')">4</button>
+                        <button class="number-btn" onclick="appendNumber('5')">5</button>
+                        <button class="number-btn" onclick="appendNumber('6')">6</button>
+                        <button class="operator-btn" onclick="setOperator('*')">x</button>
+                        <br>
+                        <!-- Row 3 -->
+                        <button class="number-btn" onclick="appendNumber('1')">1</button>
+                        <button class="number-btn" onclick="appendNumber('2')">2</button>
+                        <button class="number-btn" onclick="appendNumber('3')">3</button>
+                        <button class="operator-btn" onclick="setOperator('-')">-</button>
+                        <br>
+                        <!-- Row 4 -->
+                        <button class="number-btn" onclick="appendNumber('0')">0</button>
+                        <button class="number-btn" onclick="appendNumber('.')">.</button>
+                        <button class="action-btn" onclick="calculate('=')">=</button>
+                        <button class="operator-btn" onclick="setOperator('+')">+</button>
+                        <br>
+                        <!-- Row 5 -->
+                        <button class="action-btn wide-btn" onclick="clearCalc()">Clear</button>
+                    </div>
+
+                    <div id="LegacyCalc">
+                        <h3>Old Input Method</h3>
+                        <label>Number 1: <input type="number" id="Number1_TB" /></label>
+                        <label>Operator:
+                            <select id="OperatorList">
+                                <option value="1">Add (+)</option>
+                                <option value="2">Subtract (-)</option>
+                                <option value="3">Multiply (x)</option>
+                                <option value="4">Divide (/)</option>
+                            </select>
+                        </label>
+                        <label>Number 2: <input type="number" id="Number2_TB" /></label>
+                        <button id="CalcButton">Calculate</button>
+                        <button id="LegacyClearButton">Clear</button>
+                        <br><br>
+                        <div id="ResultBox" style="font-weight: bold; color: blue;"></div>
+                        <div id="result_label" style="display:none;"></div> <!-- Kept for compatibility if needed -->
+                    </div>
+                </div>
+
+            </section>
+        </div>
+    </div>
+
+    <footer id="footer">
+        <div>
+            <img id="image2" src="images/Dog_Photo_Before.jpg" alt="Photo of my dog about 2 years ago" />
+            <img id="image3" src="images/Dog_Photo_After.jpg" alt="Photo of my dog about 3 months ago" />
+        </div>
+        <br /><br /><br /><br /><br /><br /><br />
+        <p>©TJ Munger <strong>¯\_(ツ)_/¯</strong> <span id="currentDate"></span></p>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/calculator.js"></script>
+</body>
+
+</html>

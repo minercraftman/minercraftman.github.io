@@ -1,0 +1,160 @@
+﻿.resume-container {
+    background-color: #1e1e1e;
+    padding: 4rem;
+    max-width: 800px;
+    margin: 0 auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    font-family: 'Roboto', 'Verdana', sans-serif;
+    color: #d4d4d4;
+}
+
+.resume-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.resume-header h1 {
+    font-size: 3.6rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: #ffffff;
+}
+
+.contact-info {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+    color: #aaa;
+}
+
+.resume-section {
+    margin-bottom: 2rem;
+}
+
+.resume-section h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #f39c12;
+    /* Bright Orange Accent */
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    text-align: left;
+    border-bottom: 2px solid #f39c12;
+    padding-bottom: 0.5rem;
+}
+
+.resume-section hr {
+    display: none;
+    /* We use border-bottom on H2 instead */
+}
+
+.resume-section p {
+    font-size: 1.4rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    text-align: justify;
+}
+
+.resume-item {
+    margin-bottom: 1.5rem;
+}
+
+.item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+.item-header h3 {
+    font-size: 1.6rem;
+    margin: 0;
+    color: #ffffff;
+    text-align: left;
+}
+
+.item-sub {
+    font-style: italic;
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+}
+
+.resume-item ul {
+    list-style-type: disc;
+    margin-left: 2rem;
+    margin-top: 0.5rem;
+}
+
+.resume-item li {
+    font-size: 1.4rem;
+    margin-bottom: 0.3rem;
+    padding-left: 0.5rem;
+}
+
+.skills-list li {
+    list-style-type: none;
+    margin-bottom: 0.5rem;
+}
+
+/* Print Styles */
+@media print {
+    body {
+        padding: 0;
+        background-color: white;
+    }
+
+    #Banner,
+    #SideLinks,
+    #footer,
+    #DropdownDiv,
+    nav {
+        display: none !important;
+    }
+
+    #Wrapper {
+        border: none;
+        float: none;
+        width: 100%;
+    }
+
+    #Content {
+        width: 100%;
+        float: none;
+    }
+
+    .resume-container {
+        box-shadow: none;
+        padding: 0;
+    }
+}
+
+/* Skills Table */
+.skills-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    font-size: 1.4rem;
+}
+
+.skills-table td {
+    padding: 10px;
+    border: 1px solid #333;
+}
+
+.skills-label {
+    font-weight: bold;
+    width: 30%;
+    color: #ffffff;
+    /* White for labels to pop */
+}
+
+/* Zebra Striping for Dark Mode */
+.skills-row-alt {
+    background-color: #252526;
+    /* Slightly lighter than main bg */
+}
+
+/* Ensure text in cells is readable */
+.skills-table tr {
+    color: #d4d4d4;
+}

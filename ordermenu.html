@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html id="WebPage">
+
+<head>
+    <meta charset="utf-8" />
+    <title>PizzaTime - My ITM 325 Web Site</title>
+    <link href="css/style.css" rel="stylesheet" />
+    <style>
+        .uline {
+            text-decoration: underline;
+            font-weight: bold;
+        }
+
+        #blue {
+            color: blue;
+        }
+
+        #green {
+            color: green;
+        }
+
+        #total {
+            color: red;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .taxLine {
+            border-bottom: 1px solid black;
+        }
+
+        #Menu {
+            width: 100%;
+            border-spacing: 10px;
+        }
+
+        #Menu th {
+            text-align: left;
+            border-bottom: 1px solid black;
+            padding-bottom: 5px;
+        }
+
+        #Menu td {
+            vertical-align: top;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <header id="Banner">
+        <img id="icon1" src="images/icon_profile.jpg" alt="My Icon" />
+        <img id="image1" src="images/profile_picture.jpg" alt="A picture of me." />
+        <h1>My ITM 325 Web Site</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="resume.html">Résumé</a></li>
+                <li><a href="calculator.html">Calculator</a></li>
+                <li><a href="ordermenu.html">PizzaTime</a></li>
+                <li><a href="hangman.html">Hangman</a></li>
+                <li id="DropdownLi"><a id="DropdownA" href="#">FontSize</a>
+                    <div id="DropdownDiv">
+                        <a href="#">12px</a>
+                        <a href="#">14px</a>
+                        <a href="#">16px</a>
+                        <a href="#">18px</a>
+                        <a href="#">20px</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div>
+        <div id="Wrapper">
+            <aside id="SideLinks">
+                <h2>Side Links</h2>
+                <ul>
+                    <li><a href="#">Link 1</a></li>
+                    <li><a href="#">Link 2</a></li>
+                    <li><a href="#">Link 3</a></li>
+                    <li><a href="#">Link 4</a></li>
+                    <li><a href="#">Link 5</a></li>
+                </ul>
+            </aside>
+            <section id="Content">
+
+                <h1>Order Menu</h1>
+                <table id="Menu">
+                    <tr>
+                        <th style="width: 30%">Order</th>
+                        <th>Size</th>
+                        <th>Crust</th>
+                        <th>Toppings ($2 each)</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div id="OrderLabel"
+                                style="font-family: monospace; background-color: #eee; padding: 10px; border: 1px dashed black;">
+                                Please select a size and crust
+                            </div>
+                        </td>
+                        <td>
+                            <div id="sizeListContainer">
+                                <label><input type="radio" name="size" value="7.95"
+                                        data-name="Personal (8&quot; - 7.95)"> Personal (8" - 7.95)</label><br>
+                                <label><input type="radio" name="size" value="9.95" data-name="Small (12&quot; - 9.95)">
+                                    Small (12" - 9.95)</label><br>
+                                <label><input type="radio" name="size" value="12.95"
+                                        data-name="Medium (16&quot; - 12.95)"> Medium (16" - 12.95)</label><br>
+                                <label><input type="radio" name="size" value="17.95"
+                                        data-name="Large (18&quot; - 17.95)"> Large (18" - 17.95)</label><br>
+                                <label><input type="radio" name="size" value="22.95"
+                                        data-name="Family (24&quot; - 22.95)"> Family (24" - 22.95)</label>
+                            </div>
+                        </td>
+                        <td>
+                            <div id="crustListContainer">
+                                <label><input type="radio" name="crust" value="0.00" data-name="Crispy Thin"> Crispy
+                                    Thin</label><br>
+                                <label><input type="radio" name="crust" value="0.00" data-name="Thin"> Thin</label><br>
+                                <label><input type="radio" name="crust" value="0.00" data-name="Regular">
+                                    Regular</label><br>
+                                <label><input type="radio" name="crust" value="2.95" data-name="Deep Dish (+2.95)"> Deep
+                                    Dish (+2.95)</label>
+                            </div>
+                        </td>
+                        <td>
+                            <div id="toppingsListContainer">
+                                <label><input type="checkbox" name="toppings" value="2xCheese"> 2xCheese</label><br>
+                                <label><input type="checkbox" name="toppings" value="Pepperoni"> Pepperoni</label><br>
+                                <label><input type="checkbox" name="toppings" value="Italian Sausage"> Italian
+                                    Sausage</label><br>
+                                <label><input type="checkbox" name="toppings" value="Ham"> Ham</label><br>
+                                <label><input type="checkbox" name="toppings" value="Olives"> Olives</label><br>
+                                <label><input type="checkbox" name="toppings" value="Green Pepper"> Green
+                                    Pepper</label><br>
+                                <label><input type="checkbox" name="toppings" value="Red Pepper"> Red Pepper</label><br>
+                                <label><input type="checkbox" name="toppings" value="Onion"> Onion</label><br>
+                                <label><input type="checkbox" name="toppings" value="Mushroom"> Mushroom</label>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                <br>
+                <button id="CancelButton">Cancel Order</button>
+
+            </section>
+        </div>
+    </div>
+
+    <footer id="footer">
+        <div>
+            <img id="image2" src="images/Dog_Photo_Before.jpg" alt="Photo of my dog about 2 years ago" />
+            <img id="image3" src="images/Dog_Photo_After.jpg" alt="Photo of my dog about 3 months ago" />
+        </div>
+        <br /><br /><br /><br /><br /><br /><br />
+        <p>©TJ Munger <strong>¯\_(ツ)_/¯</strong> <span id="currentDate"></span></p>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/pizza.js"></script>
+</body>
+
+</html>
